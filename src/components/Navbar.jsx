@@ -24,6 +24,7 @@ const Navbar = () => {
             <button>hello</button>
         </nav>
         <Outlet/>
+            <button>HOME</button>
         </>
     )
 }

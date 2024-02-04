@@ -1,19 +1,29 @@
 import React from "react";
 import img from '../assets/temp.jpg'
+import { Link, Outlet } from "react-router-dom";
 
 const Navbar = () => {
     return (
         <>
-        <div className=" h-[4rem] flex justify-around bg-slate-500 p-0">
+        <nav className=" h-[4rem] flex justify-around bg-slate-500 p-0">
             <img src={img} alt="" />
             <ul className="flex gap-[5rem] items-center">
-                <li>Home</li>
-                <li>About</li>
-                <li>Contact</li>
-                <li>Services</li>
+                <li>
+                    <Link to="/">Home</Link>
+                </li>
+                <li>
+                    <Link to="/AboutUs">About Us</Link>
+                </li>
+                <li>
+                    <Link to="/Services">Services</Link>
+                </li>
+                <li>
+                    <Link to="/Contact">Contact Us</Link>
+                </li>
             </ul>
             <button>hello</button>
-        </div>
+        </nav>
+        <Outlet/>
         </>
     )
 }
